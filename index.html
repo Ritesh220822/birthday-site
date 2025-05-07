@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday My Love ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+      color: black ;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    .container {
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 10px auto;
+      line-height: 1.6;
+    }
+
+    .heart {
+      color: #ff4d6d;
+      font-size: 3em;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    .button {
+      margin: 15px;
+      background: #fff;
+      color: #ff4d6d;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1em;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background: #ffe3ec;
+    }
+
+    .hidden-message {
+      margin-top: 20px;
+      font-size: 1.3em;
+      color: black;
+      display: none;
+    }
+
+    #gallery img {
+      width: 80%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: opacity 1s ease-in-out;
+      margin-top: 30px;
+    }
+
+    audio {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="heart">❤️</div>
+    <h1>Happy Birthday Chinnnuuuu My Wifeyyyyy 🎉❤️❤️</h1>
+    <p>You are the reason my heart smiles every day. On your birthday, I want to make you feel as special as you make me feel every moment. 💖</p>
+    <p>Let’s make this day magical—because you are magic to me.</p>
+
+    <!-- Photo Slideshow -->
+    <div id="gallery">
+      <img id="slide" src="images/pic1.jpg" alt="Us together">
+    </div>
+
+    <!-- Surprise Buttons -->
+    <div style="margin-top: 30px;">
+      <button class="button" onclick="showSurprise(1)">🎁 Surprise 1</button>
+      <button class="button" onclick="showSurprise(2)">🎁 Surprise 2</button>
+      <button class="button" onclick="showSurprise(3)">🎁 Surprise 3</button>
+      <button class="button" onclick="showSurprise(4)">🎁 Surprise 4</button>
+      <button class="button" onclick="showSurprise(5)">🎁 Surprise 5</button>
+      <button class="button" onclick="showSurprise(6)">🎁 Surprise 6</button>
+      <button class="button" onclick="showSurprise(7)">🎁 Surprise 7</button>
+      <button class="button" onclick="showSurprise(8)">🎁 Surprise 8</button>
+    </div>
+
+    <!-- Hidden Messages -->
+    <div id="surprise1" class="hidden-message">I fell in love with you because you are the reason for my life... ❤️</div>
+    <div id="surprise2" class="hidden-message">Every love song suddenly makes me feel about you and your presence.. 🎶</div>
+    <div id="surprise3" class="hidden-message">I’ve planned everything about us how are goin to be 😉</div>
+    <div id="surprise4" class="hidden-message">One day, we’ll wake up next to each other and wish gud mrng and wish all occasions but not on message.. ☀️</div>
+    <div id="surprise5" class="hidden-message">I love you more than words can say. Forever and always. 💍</div>
+    <div id="surprise6" class="hidden-message">The way you care about me no one does because you are the only one for me</div>
+    <div id="surprise7" class="hidden-message">Let's promise each other we will be together no matter wht happens...</div>
+    <div id="surprise8" class="hidden-message">I love you forever and ever and ever....</div>
+    <!-- Optional Background Music -->
+    <audio controls autoplay loop>
+      <source src="birthday.mp3.mp3" type="audio/mpeg">
+      Your browser does not support the audio tag.
+    </audio>
+  </div>
+
+  <script>
+    // Slideshow
+    const photos = ["images/pic1.jpg", "images/pic2.jpg", "images/pic3.jpg","images/pic4.jpg","images/pic5.jpg"];
+    let current = 0;
+    setInterval(() => {
+      current = (current + 1) % photos.length;
+      document.getElementById("slide").src = photos[current];
+    }, 4000);
+
+    // Surprise Message Reveal
+    function showSurprise(num) {
+      const el = document.getElementById("surprise" + num);
+      if (el.style.display === "none" || el.style.display === "") {
+        el.style.display = "block";
+      } else {
+        el.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
